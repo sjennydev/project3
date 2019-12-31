@@ -1,0 +1,12 @@
+[
+    {
+        "name": "h20",
+        "amount": 60,
+        "isPaid": true
+    },
+    {
+        "name": "Chewy.com",
+        "amount": 70,
+        "isPaid": false
+    }
+]
