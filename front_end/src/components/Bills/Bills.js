@@ -1,5 +1,3 @@
-import React, { Component } from 'react';
-
 class billsData extends Component {
     state = {
         bills: [],
