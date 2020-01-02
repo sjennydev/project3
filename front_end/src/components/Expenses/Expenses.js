@@ -35,11 +35,10 @@ class expensesData extends Component {
                         return (
                             <tr>
                                 <th scope="row">{this.state.name}</th>
-                                <td>{this.state.amount}</td>
-                            </tr>
 
-                            <tr>
-                                <td onClick={(e) => this.deleteExpenses()}><span className="delete-btn">Delete All expenses</span> </td>
+                                <td>{this.state.amount}</td>
+
+                                <td onClick={() => this.deleteExpenses(Expense._id, index)}><span className="delete-btn">Delete</span> </td>
                             </tr>
                         )
                     })}
