@@ -8,6 +8,16 @@ class billsData extends Component {
         isPaid: false
     }
 
+    deleteBill = (id, index) => {
+        fetch('bills/' + id, {
+            method: 'DELETE'
+        }).then((data) => {
+            this.setState({
+                bills: [...this.state.bills.slice(0, index), ...this.state.bills.slice(index + 1)]
+            });
+        });
+    }
+
     render() {
         <div className="billsdata-container">
             <h3>All Bills</h3>
@@ -35,7 +45,6 @@ class billsData extends Component {
             </table>
         </div>
     }
-
 
 }
 
