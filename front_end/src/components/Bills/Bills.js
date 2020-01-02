@@ -37,7 +37,7 @@ class billsData extends Component {
                                 <th scope="row">{this.state.name}</th>
                                 <td>{this.state.amount}</td>
                                 <td>{this.state.isPaid}</td>
-                                <td onClick={() => this.deletebill(bill._id, index)}><span className="delete">Delete</span> </td>
+                                <td onClick={() => this.deleteBill(bill._id, index)}><span className="delete">Delete</span> </td>
                             </tr>
                         )
                     })}
