@@ -7,6 +7,18 @@ class expensesData extends Component {
         amount: 0
     }
 
+
+    deleteExpenses = (id, index) => {
+        fetch('expenses/' + id, {
+            method: 'DELETE'
+        }).then((data) => {
+            this.setState({
+                expenses: [...this.state.expenses.slice(0, index), ...this.state.expenses.slice(index + 1)]
+            });
+        });
+    }
+
+
     render() {
         <div className="expenses-data-container">
             <h3>All Expenses</h3>
